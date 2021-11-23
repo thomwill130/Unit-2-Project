@@ -7,10 +7,21 @@ using namespace std;
 int answerCount = 0; //counts correct answers
 int questCount = 0; //counts completed questions
 
-void scoreCheck()
+void scoreDisplay()
 {
     cout << "Your current score is " << answerCount << "/10. You have answered " << questCount << "/10 questions so far.";
     cout << "\n\nNext question:\n\n";
+}
+
+int isCorrect(string ans, string correctAns)
+{
+    if (ans == correctAns)
+    {
+        cout << "Correct!";
+        return 1;
+    }
+    cout << "Incorrect.";
+    return 0;
 }
 int main()
 {
@@ -25,8 +36,10 @@ int main()
     system("cls");
 
     //main quiz
-    char a1 = cin >> "What is the ?";
-    if (a1 == 'C')
+    //question one
+    char response1;
+    response1 = cin >> "What is the ?";
+    if (response1 == 'C')
     {
         cout << "\n\nCorrect!";
         answerCount == answerCount + 1;
