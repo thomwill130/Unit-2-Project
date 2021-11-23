@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 //global variables
@@ -13,8 +14,9 @@ void scoreDisplay()
     cout << "\n\nNext question:\n\n";
 }
 
-int isCorrect(string ans, string correctAns)
+int isCorrect(char, char correctAns)
 {
+    questCount == questCount + 1;
     if (ans == correctAns)
     {
         cout << "Correct!";
@@ -36,20 +38,12 @@ int main()
     system("cls");
 
     //main quiz
-    //question one
+
+    //question one (filler question)
     char response1;
-    response1 = cin >> "What is the ?";
-    if (response1 == 'C')
-    {
-        cout << "\n\nCorrect!";
-        answerCount == answerCount + 1;
-        questCount == questCount + 1;
-    }
-    else
-    {
-        cout << "Incorrect.";
-        questCount == questCount + 1;
-    }
-    
-}
+    cout << "What is the third capital letter in the alphabet?";
+    cin >> response1;
+    isCorrect(response1, 'C');
+
+
 
