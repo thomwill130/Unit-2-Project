@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 #include <windows.h>  
-#include <conio.h>
 using namespace std;
 
 //global variables
@@ -28,7 +27,7 @@ int isCorrect(char ans, char correctAns, int pointValue)
         correctQCount += 1;
         return pointValue;
     }
-    textcolor(RED);
+    system("Color 04");
     cout << "Incorrect.\n\n";
     system("Color 07");
     return 0;
@@ -158,4 +157,3 @@ int main()
 }
 
 
-https://www.youtube.com/watch?v=MvX4tVETjHk USE THIS FOR COLOUR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*****
