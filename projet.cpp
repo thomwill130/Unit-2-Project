@@ -30,27 +30,27 @@ void markGrader(int mark)
     }
     else if (mark == 10)
     {
-        cout << "Your grade for this test: S (100%)";
+        cout << "Your grade for this test: S (100%, perfect!)";
     }
     else if (mark >= 8)
     {
-        cout << "Your grade for this test: A (8+ correct answers)";
+        cout << "Your grade for this test: A (8+ correct answers, passed)";
     }
     else if (mark == 7)
     {
-        cout << "Your grade for this test: B (7 correct answers)";
+        cout << "Your grade for this test: B (7 correct answers, passed)";
     }
     else if (mark == 6)
     {
-        cout << "Your grade for this test: C (6 correct answers)";
+        cout << "Your grade for this test: C (6 correct answers, passed)";
     }
     else if (mark == 5)
     {
-        cout << "Your grade for this test: D (5 correct answers)";
+        cout << "Your grade for this test: D (5 correct answers, passed)";
     }
     else if (mark < 5)
     {
-        cout << "Your grade for this test: F (under 5 correct answers - failed";
+        cout << "Your grade for this test: F (under 5 correct answers - failed)";
     }
 }
 
@@ -195,13 +195,13 @@ int main()
     //question five (uppcase/lowercase answer)
     string response5;
     cout << "What is the capital of Canada? Enter it in either all UPPERCASE, all lowercase, or with the first letter capitalized.\n";
-    cin >> response5; 
+    cin >> response5;
     isCorrectMulti(response5, "ottawa", "OTTAWA", "Ottawa", 20);
     scoreDisplay();
 
     //question six (filler question)
     string response6;
-    cout << "Can fish drown?";
+    cout << "Can fish drown? (remember to use all uppercase)\n";
     cin >> response6;
     isCorrect(response6, "YES", 15);
     scoreDisplay();
@@ -212,19 +212,37 @@ int main()
     cin >> response7;
     isCorrect(response7, 'D', 30);
     scoreDisplay();
-    
+
     //question eight (multiple choice int)
     char response8;
-    cout << "Which one of these numbers is above 5? Enter one number: 4, 2, 5, or 7";
+    cout << "Which one of these numbers is above 5? Enter one number: 4, 2, 5, or 7\n";
     cin >> response8;
-    isCorrect(response8, '7', 20);
+    isCorrect(response8, '7', 10);
     scoreDisplay();
 
     //question nine
+    char response9;
+    cout << "Which of the following allows fish to breathe underwater? \n\nA: Lungs\nB: Gills\n C: Mouth\nD: Ears\n";
+    cin >> response9;
+    isCorrect(response9, 'B', 25);
+    scoreDisplay();
 
     //question ten
+    string response10;
+    cout << "What is Sasuke's last name? (capitalize first letter)";
+    cin >> response10;
+    isCorrect(response10, "Tiesma", 35);
 
-    //outro
+    //outro1
+    cin.ignore();
+    cout << "\n\nCongratulations! You have answered all the questions on this quiz! Press any key to be taken to the grading screen.\n\n";
+    cin.get();
+    system("cls");
+
+    //outro2
+    markGrader(correctQCount);
+    cout << "\n\n\nThank you for taking this test!";
+
 
 
 
@@ -232,5 +250,4 @@ int main()
 
 
 }
-
 
