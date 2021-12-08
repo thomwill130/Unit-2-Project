@@ -18,7 +18,7 @@ void scoreDisplay()
     cout << "\n\n\n\nNext question:\n\n";
 }
 
-void colourChange(int color)
+void colourChange(int color) //changed colour, used in other functions
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
@@ -56,7 +56,7 @@ void markGrader(int mark)
     }
 }
 
-void currentTime()
+void currentTime()//broken i think, but for challenge
 {
     time_t rawtime;
     struct tm* timeinfo;
@@ -72,7 +72,7 @@ int isCorrect(char ans, char correctAns, int pointValue)
     questCount += 1;
     if (ans == correctAns)
     {
-        PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        //PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
         colourChange(2);
         cout << "Correct!\n\n";
         colourChange(15);
@@ -80,7 +80,7 @@ int isCorrect(char ans, char correctAns, int pointValue)
         correctQCount += 1;
         return pointValue;
     }
-    PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
+  //  PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
     colourChange(4);
     cout << "Incorrect.\n\n";
     colourChange(15);
@@ -92,7 +92,7 @@ int isCorrect(string ans, string correctAns, int pointValue)
     questCount += 1;
     if (ans == correctAns)
     {
-        PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        //PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
         colourChange(2);
         cout << "Correct!\n\n";
         colourChange(15);
@@ -100,7 +100,7 @@ int isCorrect(string ans, string correctAns, int pointValue)
         correctQCount += 1;
         return pointValue;
     }
-    PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
+    //PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
     colourChange(4);
     cout << "Incorrect.\n\n";
     colourChange(15);
@@ -112,7 +112,7 @@ int isCorrect(int ans, int correctAns, int pointValue)
     questCount += 1;
     if (ans == correctAns)
     {
-        PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        //PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
         colourChange(2);
         cout << "Correct!\n\n";
         colourChange(15);
@@ -120,7 +120,7 @@ int isCorrect(int ans, int correctAns, int pointValue)
         correctQCount += 1;
         return pointValue;
     }
-    PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
+    //PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
     colourChange(4);
     cout << "Incorrect.\n\n";
     colourChange(15);
@@ -132,7 +132,7 @@ int isCorrectMulti(string ans, string correctAns, string correctAns2, string cor
     questCount += 1;
     if ((ans == correctAns) || (ans == correctAns2) || (ans == correctAns3))
     {
-        PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        //PlaySound(TEXT("correct.wav"), NULL, SND_FILENAME | SND_ASYNC);
         colourChange(2);
         cout << "Correct!\n\n";
         colourChange(15);
@@ -140,7 +140,7 @@ int isCorrectMulti(string ans, string correctAns, string correctAns2, string cor
         correctQCount += 1;
         return pointValue;
     }
-    PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
+    //PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
     colourChange(4);
     cout << "Incorrect.\n\n";
     colourChange(15);
@@ -263,7 +263,7 @@ int main()
     markGrader(correctQCount); //letter grade challenge
     cout << "\n\n\nThank you for taking this test! You finished at " << currentTime << ".";
 
-
+    //done
 
 
 
